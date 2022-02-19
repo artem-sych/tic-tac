@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    background-color: white;
+    height: 100%;
+}
+
+main {
+    margin: auto auto;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: black;
+    }
+}
+
+i {
+    display: block;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    padding: 0 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.wrapper__play {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    justify-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(104, 22, 236);
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.playing__field {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.circle {
+    background: url(../assets/svg/circle.svg) 50% 50%/47% 47% no-repeat;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.cross {
+    background: url(../assets/svg/cross.svg) 50% 50%/60% 60% no-repeat;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.alertRepeat {
+    background-color: rgb(224, 119, 119);
+}
+
+
+
+// .top-left {
+//     background-color: blue;
+// }
+
+// .top-center {
+//     background-color: green;
+// }
+
+// .top-right {
+//     background-color: blue;
+// }
+
+
+// .middle-left {
+//     background-color: blue;
+// }
+
+// .middle-center {
+//     background-color: green;
+// }
+
+// .middle-right {
+//     background-color: blue;
+// }
+
+// .bottom-left {
+//     background-color: blue;
+// }
+
+// .bottom-center {
+//     background-color: green;
+// }
+
+// .bottom-right {
+//     background-color: blue;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+
+    .footer__link {
+        background: url(../assets/svg/rs_school_js.svg) 50% no-repeat;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+        display: block;
+
+    }
+
+    .footer__tag {
+        padding: 20px 20px;
+    }
+
+    .background__link {
+        height: 40px;
+        width: 80px;
+        margin: 20px 20px;
+        padding: 5px 5px;
+    }
+}

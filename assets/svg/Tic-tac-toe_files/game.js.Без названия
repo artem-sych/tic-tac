@@ -1,0 +1,55 @@
+const arrField = document.querySelectorAll('.playing__field');
+let arrResult = ['', '', '', '', '', '', '', '', ''];
+let nextTurn = 'cross';
+
+// повесли листенер на все поля, проверка по нажатию есть ли класс или нет, если нет, добавляем и переключаем
+for (let i = 0; i < arrField.length; i++) {
+  arrField[i].addEventListener("click", () => {
+    if (arrField[i].classList.contains('cross') ||
+      arrField[i].classList.contains('circle')) {
+      arrField[i].classList.add('alertRepeat');
+      setTimeout(() => arrField[i].classList.remove('alertRepeat'), 500);
+    } else {
+      arrResult[i] = nextTurn;
+      turnValue();
+      updateField(arrResult, arrField);
+    }
+    cheackDraw();
+  });
+}
+
+//проверка массива на пустые значения
+function cheackDraw() {
+  if (!arrResult.includes('')) {
+    console.log('ничья');
+  }
+}
+cheackDraw();
+
+//замена значений в массивах
+function updateField(arr, subArr) {
+  arr.forEach((el, index) => {
+    if (el !== '') {
+      subArr[index].classList.add(el);
+    }
+  });
+}
+
+//сброс стилей 
+function clearFeald() {
+  arrField.forEach((el) => {
+    el.classList.remove('cross');
+    el.classList.remove('circle');
+  });
+  for (let i = 0; i < arrResult.length; i++) {
+    arrResult[i] = '';
+  }
+  nextTurn = 'cross';
+}
+
+
+
+//переключение nextTurn крестик/нолик
+function turnValue() {
+  nextTurn = (nextTurn === 'cross') ? 'circle' : 'cross';
+}
